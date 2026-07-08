@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ADLEA Solutions for Advocacy and Consulting</title>
+<meta name="description" content="Strategic advocacy and expert consulting that expands the reach, recognition, and sustainability of Armenian Dual Language Immersion programs around the world.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Nunito+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/styles.css">
+<style>
+  /* ── Opening statement: two-column ── */
+  .adv-split {
+    display: grid;
+    grid-template-columns: 1fr 420px;
+    gap: 4rem;
+    align-items: center;
+  }
+  .adv-prose .eyebrow { display: block; margin-bottom: 1.5rem; }
+  .adv-prose p {
+    font-size: 1.02rem;
+    font-weight: 400;
+    color: var(--gray-text);
+    line-height: 1.8;
+    margin: 0;
+  }
+  .adv-image-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .adv-circle {
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 6px solid var(--sky);
+    box-shadow: 0 8px 32px rgba(92,162,215,0.25);
+    flex-shrink: 0;
+  }
+  .adv-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 80% 30%;
+  }
+
+  @media (max-width: 1100px) {
+    .adv-split { grid-template-columns: 1fr; gap: 2.5rem; }
+    .adv-circle { width: 340px; height: 340px; }
+  }
+
+  /* ── Three service cards ── */
+  .adv-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: var(--space-lg);
+  }
+  .adv-card {
+    background: var(--white);
+    border-radius: 12px;
+    padding: 2.2rem 1.8rem;
+    box-shadow: 0 3px 14px rgba(50,73,110,0.09);
+    border-top: 4px solid var(--sky);
+  }
+  .adv-card .adv-num {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.4rem;
+    height: 2.4rem;
+    border-radius: 50%;
+    background: var(--gold);
+    color: var(--white);
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 1rem;
+    margin-bottom: 1.1rem;
+  }
+  .adv-card h3 { font-size: 1.05rem; color: var(--navy); margin-bottom: 0.6rem; line-height: 1.3; }
+  .adv-card p  { font-size: 0.93rem; color: var(--gray-text); line-height: 1.65; margin: 0; }
+
+  /* ── Who We Work With ── */
+  .adv-audience-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+    margin-top: var(--space-lg);
+  }
+  .adv-audience-card {
+    background: var(--white);
+    border-radius: 10px;
+    padding: 1.5rem 1.4rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    box-shadow: 0 2px 8px rgba(50,73,110,0.07);
+    border-left: 4px solid var(--sky);
+  }
+  .adv-audience-card .aud-icon { flex-shrink: 0; display: flex; }
+  .adv-audience-card .aud-icon svg { width: 1.5rem; height: 1.5rem; color: var(--sky); }
+  .adv-audience-card h4 { font-size: 0.93rem; color: var(--navy); margin: 0; line-height: 1.3; }
+
+  /* ── Responsive ── */
+  @media (max-width: 900px) {
+    .adv-grid { grid-template-columns: 1fr; }
+    .adv-audience-grid { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 600px) {
+    .adv-audience-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="nav-inner">
+    <a href="../index.html" class="brand">
+      <span class="brand-mark" aria-hidden="true">
+        <img src="../assets/adlea-logo.png" alt="" />
+      </span>
+      <span class="brand-text">ADLEA</span>
+    </a>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:22px;height:22px;"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../about.html">About Us</a></li>
+      <li><a href="../team.html">Team</a></li>
+      <li class="has-dropdown">
+        <a href="index.html" class="active">Solutions <span class="caret">&#9662;</span></a>
+        <ul class="dropdown">
+        <li class="dropdown-group-label">Core Programs</li>
+        <li><a href="online-resource-platform.html">Online Resource Platform</a></li>
+        <li><a href="professional-development.html">Professional Development</a></li>
+        <li><a href="curriculum-design-innovation.html">Curriculum Design and Innovation</a></li>
+        <li><a href="assessment-development.html">Assessment Development</a></li>
+        <li><a href="translation-interpreting.html">Translation and Interpreting</a></li>
+        <li><a href="advocacy-consulting.html" class="active">Advocacy and Consulting</a></li>
+        <li class="dropdown-group-label">Expanding Access</li>
+        <li><a href="virtual-adli-programs.html">Virtual ADLI Programs</a></li>
+        <li><a href="parent-education.html">Parent Education</a></li>
+        <li><a href="professional-exchange.html">Professional Exchange</a></li>
+        <li><a href="adlea-app.html">ADLEA App</a></li>
+        <li><a href="publications-certifications.html">Publications and Certifications</a></li>
+        <li><a href="conferences-wellness-retreats.html">ADLEA Confluence</a></li>
+        </ul>
+      </li>
+      <li><a href="../membership.html">Membership</a></li>
+      <li><a href="../partnerships.html">Partnerships</a></li>
+      <li><a href="../contact.html">Contact</a></li>
+    </ul>
+  </div>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="page-hero">
+    <div class="wrap">
+      <span style="color:var(--navy); font-family:var(--font-display); font-size:0.85rem; letter-spacing:0.08em; text-transform:uppercase; font-weight:700;">Core Programs</span>
+      <h1>Advocacy and Consulting</h1>
+      <p style="max-width:760px;">Strategic advocacy and expert consulting that expands the reach, recognition, and sustainability of Armenian Dual Language Immersion programs around the world.</p>
+    </div>
+  </section>
+
+  <!-- SECTION 1: Opening Statement -->
+  <section>
+    <div class="wrap">
+      <div class="adv-split">
+        <div class="adv-prose">
+          <span style="color:var(--gold); font-family:var(--font-display); font-size:0.8rem; letter-spacing:0.09em; text-transform:uppercase; font-weight:700; display:block; margin-bottom:1.5rem;">The Infrastructure of Impact</span>
+          <p style="margin-bottom:1.4rem;">Armenian Dual Language Immersion programs do not sustain themselves on educational merit alone. They require champions, people who can make the case to school boards, district administrators, government officials, and community stakeholders that Armenian DLI is not a niche program for a specific community, but a rigorous, research-backed model that produces multilingual, academically strong, culturally grounded learners. Without that advocacy, even the strongest programs remain vulnerable to budget cuts, policy shifts, and institutional indifference.</p>
+          <p>ADLEA serves as that champion. Whether navigating the policy landscape of a U.S. school district, presenting to a ministry of education in Europe or the Middle East, or helping a diaspora community make the case to local officials for a new program, ADLEA brings the research, the language, and the strategic insight to move Armenian DLI from a conversation to a commitment.</p>
+        </div>
+        <div class="adv-image-wrap">
+          <div class="adv-circle">
+            <img src="../assets/advocacy-hero.png" alt="ADLEA advocacy and partnership in action">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 2: Three Services -->
+  <section class="bg-sky-tint">
+    <div class="wrap">
+      <div style="text-align:center; max-width:820px; margin:0 auto var(--space-lg);">
+        <span style="color:var(--gold); font-family:var(--font-display); font-size:0.8rem; letter-spacing:0.09em; text-transform:uppercase; font-weight:700;">What We Do</span>
+        <h2 style="margin-top:0.75rem; white-space:nowrap; font-size:clamp(1.4rem, 2.3vw, 2.1rem);">Three Ways ADLEA Champions Armenian DLI</h2>
+      </div>
+      <div class="adv-grid">
+        <div class="adv-card">
+          <div class="adv-num">1</div>
+          <h3>Policy Advocacy at the District and Government Level</h3>
+          <p>ADLEA works directly with district administrators, school boards, and government officials to establish, protect, and expand Armenian DLI programs. We present the research, navigate local policy, and build the institutional case for long-term program investment.</p>
+        </div>
+        <div class="adv-card">
+          <div class="adv-num">2</div>
+          <h3>Consulting for Institutions Launching New Programs</h3>
+          <p>Starting an Armenian DLI program is complex. ADLEA provides comprehensive consulting support at every stage, from feasibility assessment and program model selection to staffing guidance, community engagement, curriculum planning, and first-year implementation.</p>
+        </div>
+        <div class="adv-card">
+          <div class="adv-num">3</div>
+          <h3>Awareness Campaigns to Grow Investment in Armenian DLI</h3>
+          <p>Expanding Armenian DLI requires public understanding and community will. ADLEA designs targeted campaigns for families, policymakers, and the broader Armenian diaspora, building the groundswell of informed advocates that every program needs to grow and endure.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 3: Who We Work With -->
+  <section>
+    <div class="wrap">
+      <div style="text-align:center; max-width:820px; margin:0 auto var(--space-lg);">
+        <span style="color:var(--gold); font-family:var(--font-display); font-size:0.8rem; letter-spacing:0.09em; text-transform:uppercase; font-weight:700;">Who We Work With</span>
+        <h2 style="margin-top:0.75rem; white-space:nowrap; font-size:clamp(1.4rem, 2.3vw, 2.1rem);">Every Stakeholder Armenian DLI Depends On</h2>
+      </div>
+      <div class="adv-audience-grid">
+        <div class="adv-audience-card">
+          <span class="aud-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 21V10l9-6 9 6v11"/><path d="M9 21v-6h6v6"/><path d="M3 21h18"/></svg></span>
+          <h4>School Districts and Site Administrators</h4>
+        </div>
+        <div class="adv-audience-card">
+          <span class="aud-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 10v10M9 10v10M15 10v10M20 10v10"/><path d="M2 10h20L12 3 2 10Z"/><path d="M2 21h20"/></svg></span>
+          <h4>Government Officials and Ministries of Education</h4>
+        </div>
+        <div class="adv-audience-card">
+          <span class="aud-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="5" y="3" width="14" height="18" rx="1"/><path d="M9 7h1M14 7h1M9 11h1M14 11h1M9 15h1M14 15h1"/></svg></span>
+          <h4>School Boards</h4>
+        </div>
+        <div class="adv-audience-card">
+          <span class="aud-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.5 3.5 5.7 3.5 9s-1 6.5-3.5 9c-2.5-2.5-3.5-5.7-3.5-9s1-6.5 3.5-9Z"/></svg></span>
+          <h4>Armenian Diaspora Organizations</h4>
+        </div>
+        <div class="adv-audience-card">
+          <span class="aud-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="7" cy="8" r="2.3"/><circle cx="17" cy="8" r="2.3"/><circle cx="12" cy="10.5" r="1.8"/><path d="M2 20c0-2.8 2-4.6 5-4.6s5 1.8 5 4.6M12 20c0-2.3 1.6-3.8 4-3.8s4 1.5 4 3.8"/></svg></span>
+          <h4>Families Considering DLI Enrollment</h4>
+        </div>
+        <div class="adv-audience-card">
+          <span class="aud-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="8" cy="8" r="3"/><circle cx="17" cy="8" r="3"/><path d="M2 20c0-3 2.5-5 6-5s6 2 6 5M13 20c0-2.5 1.8-4.3 4.5-4.3s4.5 1.8 4.5 4.3"/></svg></span>
+          <h4>Community Partners and Cultural Institutions</h4>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="tight bg-sky-tint">
+    <div class="cta-band">
+      <h2>Want to Bring This to Your Program?</h2>
+      <p class="cta-oneline">Reach out to learn how ADLEA can support your district, school, or community.</p>
+      <a href="../contact.html" class="btn btn-gold">Contact Us</a>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <a href="../index.html" class="brand">
+          <span class="brand-mark" aria-hidden="true">
+            <img src="../assets/adlea-logo.png" alt="" />
+          </span>
+          <span class="brand-text">ADLEA</span>
+        </a>
+        <p>The Armenian Dual Language Educators Association is a global, grassroots network<br>built by educators, for educators.</p>
+      </div>
+      <div>
+        <h4>Site</h4>
+        <ul>
+          <li><a href="../about.html">About Us</a></li>
+          <li><a href="../team.html">Team</a></li>
+          <li><a href="index.html">Solutions</a></li>
+          <li><a href="../membership.html">Membership</a></li>
+          <li><a href="../partnerships.html">Partnerships</a></li>
+          <li><a href="../contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="mailto:info@adlea.org">info@adlea.org</a></li>
+          <li><a href="https://linkedin.com/company/adlea">LinkedIn</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-disclaimer">
+      <p><strong>ADLEA is a nonpartisan organization.</strong> We do not represent, endorse, or advance the political agenda of any party, government, or institution. Our work is rooted in something older and more enduring: the wisdom, depth, and continuity carried by Armenian culture and language across generations. We bring that inheritance into conversation with modern pedagogy, neuroscience, and human-centered education to prepare a generation of learners ready for the world ahead. This is the whole of our mandate, nothing more, nothing less.</p>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 ADLEA Inc. All rights reserved.</span>
+      <span>Bridging languages. Connecting hearts. Empowering youth.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ADLEA Solutions for Virtual ADLI Programs</title>
+<meta name="description" content="Live, structured Armenian DLI instruction for K–12 learners who live beyond the reach of any in-person program.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Nunito+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/styles.css">
+<style>
+  .vdli-intro-split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    text-align: left;
+  }
+  .vdli-intro-split .vdli-statement { max-width: none; margin: 0; text-align: left; }
+  .vdli-intro-split .vdli-statement p { margin-top: 1rem; }
+  .vdli-intro-image img {
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 4px solid var(--sky);
+    box-shadow: 0 6px 24px rgba(92,162,215,0.2);
+    display: block;
+  }
+  @media (max-width: 900px) {
+    .vdli-intro-split { grid-template-columns: 1fr; gap: 2.5rem; }
+  }
+
+  .vdli-statement {
+    max-width: 950px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .vdli-statement p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: var(--gray-text);
+    margin-top: 1.5rem;
+  }
+
+  /* ── Stats band ── */
+  .vdli-stats-band {
+    background: var(--sky-tint);
+    border-radius: 14px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    overflow: hidden;
+    margin-top: var(--space-lg);
+  }
+  .vdli-stat-item {
+    padding: 2.5rem 2rem;
+    text-align: center;
+    border-right: 1px solid rgba(92,162,215,0.2);
+  }
+  .vdli-stat-item:last-child { border-right: none; }
+  .vdli-stat-item .stat-value {
+    font-family: var(--font-display);
+    font-size: 2.6rem;
+    font-weight: 800;
+    color: var(--gold);
+    line-height: 1;
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+  .vdli-stat-item .stat-label {
+    font-family: var(--font-display);
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--navy);
+    display: block;
+    margin-bottom: 0.35rem;
+  }
+  .vdli-stat-item .stat-sub {
+    font-size: 0.82rem;
+    color: var(--navy);
+    line-height: 1.4;
+  }
+
+  /* ── Three goals: full-width pillar cards ── */
+  .vdli-pillars {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    margin-top: var(--space-lg);
+  }
+  .vdli-pillar {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+    background: var(--white);
+    border-left: 5px solid var(--gold);
+    border-radius: 0 10px 10px 0;
+    padding: 1.75rem 2rem;
+    box-shadow: 0 2px 10px rgba(50,73,110,0.08);
+  }
+  .vdli-pillar .pillar-num {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 2.6rem;
+    height: 2.6rem;
+    border-radius: 50%;
+    background: var(--gold);
+    color: var(--white);
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 1rem;
+    flex-shrink: 0;
+    margin-top: 0.1rem;
+  }
+  .vdli-pillar h3 { font-size: 1.05rem; color: var(--navy); margin: 0 0 0.5rem; line-height: 1.3; }
+  .vdli-pillar p  { font-size: 0.93rem; color: var(--gray-text); line-height: 1.65; margin: 0; }
+
+  /* ── Who This Is For: 2-col icon cards ── */
+  .vdli-who-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-top: var(--space-lg);
+  }
+  .vdli-who-card {
+    background: var(--white);
+    border: 2px solid var(--sky);
+    border-radius: 12px;
+    padding: 2rem 1.8rem;
+    text-align: center;
+  }
+  .vdli-who-card .who-icon { display: block; margin-bottom: 0.9rem; }
+  .vdli-who-card .who-icon svg { width: 2rem; height: 2rem; color: var(--sky); }
+  .vdli-who-card h4 { font-size: 1rem; color: var(--navy); margin: 0 0 0.5rem; line-height: 1.3; }
+  .vdli-who-card p  { font-size: 0.88rem; color: var(--gray-text); margin: 0; line-height: 1.55; }
+
+  @media (max-width: 700px) {
+    .vdli-who-grid { grid-template-columns: 1fr; }
+  }
+
+  /* ── Responsive ── */
+  @media (max-width: 900px) {
+    .vdli-stats-band { grid-template-columns: 1fr; }
+    .vdli-stat-item { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.1); }
+    .vdli-stat-item:last-child { border-bottom: none; }
+    .vdli-audience-grid { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 600px) {
+    .vdli-audience-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="nav-inner">
+    <a href="../index.html" class="brand">
+      <span class="brand-mark" aria-hidden="true">
+        <img src="../assets/adlea-logo.png" alt="" />
+      </span>
+      <span class="brand-text">ADLEA</span>
+    </a>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:22px;height:22px;"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../about.html">About Us</a></li>
+      <li><a href="../team.html">Team</a></li>
+      <li class="has-dropdown">
+        <a href="index.html" class="active">Solutions <span class="caret">&#9662;</span></a>
+        <ul class="dropdown">
+        <li class="dropdown-group-label">Core Programs</li>
+        <li><a href="online-resource-platform.html">Online Resource Platform</a></li>
+        <li><a href="professional-development.html">Professional Development</a></li>
+        <li><a href="curriculum-design-innovation.html">Curriculum Design and Innovation</a></li>
+        <li><a href="assessment-development.html">Assessment Development</a></li>
+        <li><a href="translation-interpreting.html">Translation and Interpreting</a></li>
+        <li><a href="advocacy-consulting.html">Advocacy and Consulting</a></li>
+        <li class="dropdown-group-label">Expanding Access</li>
+        <li><a href="virtual-adli-programs.html" class="active">Virtual ADLI Programs</a></li>
+        <li><a href="parent-education.html">Parent Education</a></li>
+        <li><a href="professional-exchange.html">Professional Exchange</a></li>
+        <li><a href="adlea-app.html">ADLEA App</a></li>
+        <li><a href="publications-certifications.html">Publications and Certifications</a></li>
+        <li><a href="conferences-wellness-retreats.html">ADLEA Confluence</a></li>
+        </ul>
+      </li>
+      <li><a href="../membership.html">Membership</a></li>
+      <li><a href="../partnerships.html">Partnerships</a></li>
+      <li><a href="../contact.html">Contact</a></li>
+    </ul>
+  </div>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="page-hero">
+    <div class="wrap">
+      <span style="color:var(--navy); font-family:var(--font-display); font-size:0.85rem; letter-spacing:0.08em; text-transform:uppercase; font-weight:700;">Expanding Access</span>
+      <h1>Virtual ADLI Programs</h1>
+      <p style="max-width:680px;">Expanding access to Armenian DLI in areas out of in-person program reach.</p>
+    </div>
+  </section>
+
+  <!-- SECTION 1: Opening + Stats -->
+  <section>
+    <div class="wrap">
+      <div class="vdli-intro-split">
+        <div class="vdli-statement">
+          <span style="color:var(--gold); font-family:var(--font-display); font-size:0.8rem; letter-spacing:0.09em; text-transform:uppercase; font-weight:700; display:block;">Where Programs Don't Reach Yet</span>
+          <p>Armenian DLI is growing, but it is not everywhere. Families in rural communities, smaller diaspora cities, and countries without established Armenian schooling infrastructure have no local program to enroll in. Their children grow up without access to the rigorous, identity-affirming, academically powerful education that Armenian DLI provides. ADLEA's Virtual ADLI Programs bring that education directly to learners, wherever they are.</p>
+        </div>
+        <div class="vdli-intro-image">
+          <img src="../assets/vdli-virtual-photo.jpg" alt="A learner attending an Armenian DLI virtual class from home">
+        </div>
+      </div>
+      <div class="vdli-stats-band">
+        <div class="vdli-stat-item">
+          <span class="stat-value">K–12</span>
+          <span class="stat-label">Full Grade-Span Instruction</span>
+          <span class="stat-sub">From Kindergarten through Grade 12, structured and sequenced for biliteracy development</span>
+        </div>
+        <div class="vdli-stat-item">
+          <span class="stat-value">6</span>
+          <span class="stat-label">Continents Served</span>
+          <span class="stat-sub">Wherever Armenian diaspora communities exist, learning can happen</span>
+        </div>
+        <div class="vdli-stat-item">
+          <span class="stat-value">3</span>
+          <span class="stat-label">Delivery Formats</span>
+          <span class="stat-sub">Synchronous, asynchronous, and pre-recorded, built for real educator and family lives</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 2: Three Goals as pillars -->
+  <section class="bg-sky-tint">
+    <div class="wrap">
+      <div style="text-align:center; max-width:820px; margin:0 auto var(--space-lg);">
+        <span style="color:var(--gold); font-family:var(--font-display); font-size:0.8rem; letter-spacing:0.09em; text-transform:uppercase; font-weight:700;">What This Program Delivers</span>
+        <h2 style="margin-top:0.75rem; white-space:nowrap; font-size:clamp(1.4rem, 2.3vw, 2.1rem);">Armenian DLI, Without Borders</h2>
+      </div>
+      <div class="vdli-pillars">
+        <div class="vdli-pillar">
+          <div class="pillar-num">1</div>
+          <div>
+            <h3>Live Virtual Instruction for Learners Outside Program Areas</h3>
+            <p>Structured, synchronous Armenian DLI instruction delivered online by qualified educators, designed to meet the same academic and biliteracy standards as in-person programs. Learners receive real teaching, not pre-recorded content, with the interaction, feedback, and language immersion that dual language acquisition requires.</p>
+          </div>
+        </div>
+        <div class="vdli-pillar">
+          <div class="pillar-num">2</div>
+          <div>
+            <h3>Built for Diaspora Communities Without a Local Program</h3>
+            <p>Armenian diaspora communities exist on every continent, but most lack the population density or institutional infrastructure to sustain a local DLI school. Virtual ADLI Programs make it possible for a learner in rural Australia, a small European city, or a diaspora community in Latin America to participate in Armenian DLI without leaving home.</p>
+          </div>
+        </div>
+        <div class="vdli-pillar">
+          <div class="pillar-num">3</div>
+          <div>
+            <h3>A Bridge Between In-Person and Remote Armenian DLI</h3>
+            <p>For families who are temporarily relocated, homeschooling, or supplementing an existing local program, Virtual ADLI Programs serve as a flexible bridge, maintaining biliteracy development and Armenian language continuity even when in-person enrollment is not possible.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 3: Who This Is For -->
+  <section>
+    <div class="wrap">
+      <div style="text-align:center; max-width:820px; margin:0 auto var(--space-lg);">
+        <span style="color:var(--gold); font-family:var(--font-display); font-size:0.8rem; letter-spacing:0.09em; text-transform:uppercase; font-weight:700;">Who This Is For</span>
+        <h2 style="margin-top:0.75rem; white-space:nowrap; font-size:clamp(1.3rem, 2.2vw, 2rem);">Every Learner Who Deserves Access</h2>
+      </div>
+      <div class="vdli-who-grid">
+        <div class="vdli-who-card">
+          <span class="who-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 11 12 4l9 7"/><path d="M5 10v10h14V10"/><path d="M9 20v-6h6v6"/></svg></span>
+          <h4>Families Outside Established Program Areas</h4>
+          <p>K–12 learners in communities where no Armenian DLI school exists within reach.</p>
+        </div>
+        <div class="vdli-who-card">
+          <span class="who-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.5 3.5 5.7 3.5 9s-1 6.5-3.5 9c-2.5-2.5-3.5-5.7-3.5-9s1-6.5 3.5-9Z"/></svg></span>
+          <h4>Diaspora Communities Without a Local School</h4>
+          <p>Armenian communities on every continent that lack the infrastructure for an in-person program.</p>
+        </div>
+        <div class="vdli-who-card">
+          <span class="who-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 11 12 4l9 7"/><path d="M5 10v10h14V10"/><path d="M9 20v-6h6v6"/></svg></span>
+          <h4>Homeschool Families</h4>
+          <p>Families seeking structured, sequenced Armenian DLI instruction outside a traditional school setting.</p>
+        </div>
+        <div class="vdli-who-card">
+          <span class="who-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 13.5 21 7l-6.5 8L21 21l-8-3.5L9 21l-1.5-6L3 13.5Z"/></svg></span>
+          <h4>Families Temporarily Relocated or Living Abroad</h4>
+          <p>Learners who need Armenian DLI continuity during transitions, international moves, or extended travel.</p>
+        </div>
+        <div class="vdli-who-card">
+          <span class="who-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 21V10l9-6 9 6v11"/><path d="M9 21v-6h6v6"/><path d="M3 21h18"/></svg></span>
+          <h4>Schools Extending to Remote Learners</h4>
+          <p>In-person DLI programs looking to serve families in their community who cannot attend on site.</p>
+        </div>
+        <div class="vdli-who-card">
+          <span class="who-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21v-9"/><path d="M12 12c0-4-3-6-7-6 0 4 3 6 7 6Z"/><path d="M12 12c0-4 3-6 7-6 0 4-3 6-7 6Z"/></svg></span>
+          <h4>Communities Ready to Launch Virtually</h4>
+          <p>Organizations and diaspora groups building a new Armenian DLI program from the ground up, online first.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="tight bg-sky-tint">
+    <div class="cta-band">
+      <h2>Want to Bring This to Your Program?</h2>
+      <p class="cta-oneline">Reach out to learn how ADLEA can support your district, school, or community.</p>
+      <a href="../contact.html" class="btn btn-gold">Contact Us</a>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <a href="../index.html" class="brand">
+          <span class="brand-mark" aria-hidden="true">
+            <img src="../assets/adlea-logo.png" alt="" />
+          </span>
+          <span class="brand-text">ADLEA</span>
+        </a>
+        <p>The Armenian Dual Language Educators Association is a global, grassroots network<br>built by educators, for educators.</p>
+      </div>
+      <div>
+        <h4>Site</h4>
+        <ul>
+          <li><a href="../about.html">About Us</a></li>
+          <li><a href="../team.html">Team</a></li>
+          <li><a href="index.html">Solutions</a></li>
+          <li><a href="../membership.html">Membership</a></li>
+          <li><a href="../partnerships.html">Partnerships</a></li>
+          <li><a href="../contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="mailto:info@adlea.org">info@adlea.org</a></li>
+          <li><a href="https://linkedin.com/company/adlea">LinkedIn</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-disclaimer">
+      <p><strong>ADLEA is a nonpartisan organization.</strong> We do not represent, endorse, or advance the political agenda of any party, government, or institution. Our work is rooted in something older and more enduring: the wisdom, depth, and continuity carried by Armenian culture and language across generations. We bring that inheritance into conversation with modern pedagogy, neuroscience, and human-centered education to prepare a generation of learners ready for the world ahead. This is the whole of our mandate, nothing more, nothing less.</p>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 ADLEA Inc. All rights reserved.</span>
+      <span>Bridging languages. Connecting hearts. Empowering youth.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>

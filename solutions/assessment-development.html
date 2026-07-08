@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ADLEA Solutions for Assessment Development</title>
+<meta name="description" content="Purpose-built assessment tools for Armenian DLI programs, measuring what learners know, what they can do, and where instruction needs to go next.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Nunito+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/styles.css">
+<style>
+  /* ── Assessment gap split ── */
+  .assess-split {
+    display: grid;
+    grid-template-columns: 1fr 500px;
+    gap: 4rem;
+    align-items: center;
+  }
+  .assess-split .prose .eyebrow { display: block; margin-bottom: 1rem; }
+  .assess-split .prose h2 { margin-top: 0; line-height: 1.2; margin-bottom: 1.75rem; }
+  .assess-split .prose p { font-size: 1.05rem; line-height: 1.8; color: var(--gray-text); margin-bottom: 1.4rem; }
+  .assess-split .prose p:last-child { margin-bottom: 0; }
+
+  .assess-circle-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .assess-circle {
+    width: 480px;
+    height: 480px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 6px solid var(--sky);
+    box-shadow: 0 8px 32px rgba(92,162,215,0.25);
+    flex-shrink: 0;
+  }
+  .assess-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 30%;
+  }
+
+  @media (max-width: 1100px) {
+    .assess-split { grid-template-columns: 1fr; gap: 2.5rem; }
+    .assess-circle { width: 340px; height: 340px; }
+  }
+  .assess-head {
+    text-align: center;
+    max-width: 820px;
+    margin: 0 auto 3rem;
+  }
+  .assess-head h2 { margin-top: 0.75rem; line-height: 1.2; margin-bottom: 0.5rem; }
+  .assess-head p  { font-size: 1rem; color: var(--gray-text); margin-top: 1.25rem; line-height: 1.8; max-width: 760px; margin-left: auto; margin-right: auto; }
+
+  /* ── Intro prose ── */
+  .assess-prose {
+    max-width: 820px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .assess-prose p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: var(--gray-text);
+    margin-bottom: 1.5rem;
+  }
+  .assess-prose p:last-child { margin-bottom: 0; }
+
+  /* ── What needs to be measured: 4 cards ── */
+  .assess-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    margin-top: var(--space-lg);
+  }
+  .assess-card {
+    background: var(--white);
+    border-radius: 12px;
+    padding: 2rem 1.8rem;
+    box-shadow: 0 3px 14px rgba(50,73,110,0.09);
+    border-top: 4px solid var(--sky);
+  }
+  .assess-card h3 { font-size: 1.02rem; color: var(--navy); margin: 0 0 0.6rem; line-height: 1.3; }
+  .assess-card p  { font-size: 0.91rem; color: var(--gray-text); line-height: 1.65; margin: 0; }
+
+  /* ── Three goals ── */
+  .assess-goals-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: var(--space-lg);
+  }
+  .assess-goal-card {
+    background: var(--white);
+    border-radius: 12px;
+    padding: 2rem 1.6rem;
+    text-align: center;
+    box-shadow: 0 3px 14px rgba(50,73,110,0.09);
+  }
+  .assess-goal-card .goal-num {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.6rem;
+    height: 2.6rem;
+    border-radius: 50%;
+    background: var(--gold);
+    color: var(--white);
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+  }
+  .assess-goal-card h3 { font-size: 1rem; color: var(--navy); margin-bottom: 0.5rem; line-height: 1.3; }
+  .assess-goal-card p  { font-size: 0.91rem; color: var(--gray-text); line-height: 1.6; margin: 0; }
+
+  /* ── Delivery format cards ── */
+  .assess-delivery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.75rem;
+    margin-top: var(--space-lg);
+  }
+  .assess-delivery-card {
+    background: var(--white);
+    border-left: 4px solid var(--gold);
+    border-radius: 0 8px 8px 0;
+    padding: 1.6rem 1.5rem;
+    box-shadow: 0 2px 8px rgba(50,73,110,0.07);
+  }
+  .assess-delivery-card h3 { font-size: 1rem; color: var(--navy); margin: 0 0 0.5rem; line-height: 1.3; }
+  .assess-delivery-card p  { font-size: 0.91rem; color: var(--gray-text); line-height: 1.6; margin: 0; }
+
+  /* ── Responsive ── */
+  @media (max-width: 900px) {
+    .assess-grid,
+    .assess-goals-grid,
+    .assess-delivery-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="nav-inner">
+    <a href="../index.html" class="brand">
+      <span class="brand-mark" aria-hidden="true">
+        <img src="../assets/adlea-logo.png" alt="" />
+      </span>
+      <span class="brand-text">ADLEA</span>
+    </a>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:22px;height:22px;"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../about.html">About Us</a></li>
+      <li><a href="../team.html">Team</a></li>
+      <li class="has-dropdown">
+        <a href="index.html" class="active">Solutions <span class="caret">&#9662;</span></a>
+        <ul class="dropdown">
+        <li class="dropdown-group-label">Core Programs</li>
+        <li><a href="online-resource-platform.html">Online Resource Platform</a></li>
+        <li><a href="professional-development.html">Professional Development</a></li>
+        <li><a href="curriculum-design-innovation.html">Curriculum Design and Innovation</a></li>
+        <li><a href="assessment-development.html" class="active">Assessment Development</a></li>
+        <li><a href="translation-interpreting.html">Translation and Interpreting</a></li>
+        <li><a href="advocacy-consulting.html">Advocacy and Consulting</a></li>
+        <li class="dropdown-group-label">Expanding Access</li>
+        <li><a href="virtual-adli-programs.html">Virtual ADLI Programs</a></li>
+        <li><a href="parent-education.html">Parent Education</a></li>
+        <li><a href="professional-exchange.html">Professional Exchange</a></li>
+        <li><a href="adlea-app.html">ADLEA App</a></li>
+        <li><a href="publications-certifications.html">Publications and Certifications</a></li>
+        <li><a href="conferences-wellness-retreats.html">ADLEA Confluence</a></li>
+        </ul>
+      </li>
+      <li><a href="../membership.html">Membership</a></li>
+      <li><a href="../partnerships.html">Partnerships</a></li>
+      <li><a href="../contact.html">Contact</a></li>
+    </ul>
+  </div>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="page-hero">
+    <div class="wrap">
+      <span style="color:var(--navy); font-family:var(--font-display); font-size:0.85rem; letter-spacing:0.08em; text-transform:uppercase; font-weight:700;">Core Programs</span>
+      <h1>Assessment Development</h1>
+      <p style="max-width:720px;">Purpose-built assessment tools for Armenian DLI programs, measuring what learners know, what they can do, and where instruction needs to go next.</p>
+    </div>
+  </section>
+
+  <!-- SECTION 1: The Assessment Gap -->
+  <section>
+    <div class="wrap">
+      <div class="assess-split">
+        <div class="prose">
+          <span class="eyebrow" style="color:var(--gold); font-family:var(--font-display); font-size:0.8rem; letter-spacing:0.09em; text-transform:uppercase; font-weight:700;">The Assessment Gap</span>
+          <h2 style="font-size:clamp(1.6rem, 2.4vw, 2.2rem);">What Cannot Be Measured Cannot Be Improved</h2>
+          <p>If no standards-aligned curriculum exists for Armenian DLI programs outside of Armenia, it follows directly that no standards-aligned assessment does either. Assessment cannot be borrowed from general Armenian education, where the standards, the learner population, and the instructional model are fundamentally different. It cannot be translated from the partner language without losing the very thing it is meant to measure: authentic Armenian language development and content knowledge acquired through Armenian.</p>
+          <p>Armenian DLI programs need a complete assessment architecture: tools that measure where learners are in their biliteracy development, tools that measure content knowledge acquired in Armenian, and tools that give teachers actionable, real-time information to adjust instruction before the next lesson, not after the next standardized test cycle.</p>
+        </div>
+        <div class="assess-circle-wrap">
+          <div class="assess-circle">
+            <img src="../assets/assessment-hero.png" alt="Armenian DLI educators reviewing assessment data">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 2: What Needs to Be Measured -->
+  <section class="bg-sky-tint">
+    <div class="wrap">
+      <div class="assess-head">
+        <span style="color:var(--gold); font-family:var(--font-display); font-size:0.8rem; letter-spacing:0.09em; text-transform:uppercase; font-weight:700;">What Needs to Be Measured</span>
+        <h2 style="white-space:nowrap; font-size:clamp(1.3rem, 2vw, 1.9rem);">A Complete Assessment Architecture for Armenian DLI</h2>
+      </div>
+      <div class="assess-grid">
+        <div class="assess-card">
+          <h3>Language Arts Standards Mastery in Armenian</h3>
+          <p>Summative assessments that measure learner mastery of Armenian language arts standards at each grade level, covering reading, writing, speaking, and listening, aligned to the academic standards of the country or state where the program operates, not to Armenia's national standards alone.</p>
+        </div>
+        <div class="assess-card">
+          <h3>Content Knowledge Acquired Through Armenian</h3>
+          <p>Assessments that measure what learners have learned in Science, Math, Social Studies, and other content areas taught through Armenian, distinguishing between language proficiency and content understanding, and ensuring that both are held to grade-level expectations.</p>
+        </div>
+        <div class="assess-card">
+          <h3>Formative Assessments and Instructional Tracking Tools</h3>
+          <p>Embedded formative tools that teachers can use daily and weekly to monitor learning in real time, track individual learner progress along the biliteracy continuum, and make precise, data-informed decisions about where to intervene, reteach, or extend.</p>
+        </div>
+        <div class="assess-card">
+          <h3>Language Proficiency Measurement</h3>
+          <p>Tools aligned to the proficiency frameworks Armenian DLI programs are accountable to around the world. ACTFL for programs in the United States, CEFR for programs across Europe, Latin America, and Asia, and ISLPR for programs in Australia and the Asia-Pacific region, giving every program a globally recognized, standardized way to document and advocate for the language development its learners are achieving.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 3: How Assessment Works -->
+  <section>
+    <div class="wrap">
+      <div class="assess-head">
+        <span style="color:var(--gold); font-family:var(--font-display); font-size:0.8rem; letter-spacing:0.09em; text-transform:uppercase; font-weight:700;">Assessment Built for a Global Movement</span>
+        <h2 style="white-space:nowrap; font-size:clamp(1.3rem, 2vw, 1.9rem);">Flexible, Authentic, and Designed for Every Context</h2>
+        <p style="max-width:1100px; margin:1.25rem auto 0; font-size:0.85rem; color:var(--gray-text); line-height:1.8; text-align:center;">Armenian DLI programs operate across different countries, different standards systems, and different program models. A teacher in Glendale reports to California's academic standards and uses ACTFL to document language proficiency. A teacher in Lyon operates within the French national curriculum and reports to CEFR. A teacher in Buenos Aires navigates Argentine federal standards alongside CEFR benchmarks. ADLEA's assessment tools are designed with this global reality in mind: modular, multi-format, and accessible to every Armenian DLI educator in the world.</p>
+      </div>
+      <div class="assess-delivery-grid">
+        <div class="assess-delivery-card">
+          <h3>Adaptable by Design</h3>
+          <p>Built in modular formats that can be aligned to different state or national academic standards, adjusted for different program models, and scaled across grade levels, so the same assessment framework serves every Armenian DLI program regardless of where it operates.</p>
+        </div>
+        <div class="assess-delivery-card">
+          <h3>Multiple Modes of Demonstration</h3>
+          <p>Assessment in a DLI program is not limited to tests. Learners demonstrate their knowledge and language development through projects, portfolios, presentations, performance tasks, and other authentic measures that honor the full range of what bilingual learners can do in Armenian and in the partner language.</p>
+        </div>
+        <div class="assess-delivery-card">
+          <h3>Online and Beyond</h3>
+          <p>Delivered through a combination of digital tools and hands-on formats, giving educators flexibility in how they administer, collect, and analyze evidence of learning, whether in a fully equipped technology environment or a community school with limited digital infrastructure.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 4: Three Goals -->
+  <section class="bg-sky-tint">
+    <div class="wrap">
+      <div class="assess-head">
+        <span style="color:var(--gold); font-family:var(--font-display); font-size:0.8rem; letter-spacing:0.09em; text-transform:uppercase; font-weight:700;">What ADLEA Delivers</span>
+        <h2>Three Goals. One Assessment Vision.</h2>
+      </div>
+      <div class="assess-goals-grid">
+        <div class="assess-goal-card">
+          <div class="goal-num">1</div>
+          <h3>Standards-Based Proficiency Tools Where None Previously Existed</h3>
+          <p>Filling the field's most critical gap with assessments developed natively for Armenian DLI, not borrowed, not translated, not approximated.</p>
+        </div>
+        <div class="assess-goal-card">
+          <div class="goal-num">2</div>
+          <h3>Adaptable Assessments for Different Program Models</h3>
+          <p>Modular tools that align to the standards, language ratios, and program structures of Armenian DLI programs across the United States, Europe, Latin America, and Asia.</p>
+        </div>
+        <div class="assess-goal-card">
+          <div class="goal-num">3</div>
+          <h3>Data Educators Can Actually Use to Guide Instruction</h3>
+          <p>Formative tracking tools that move assessment out of the end-of-year report and into the daily rhythm of teaching, giving teachers precise, actionable information when it matters.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="tight">
+    <div class="cta-band">
+      <h2>Want to Bring This to Your Program?</h2>
+      <p class="cta-oneline">Reach out to learn how ADLEA can support your district, school, or community.</p>
+      <a href="../contact.html" class="btn btn-gold">Contact Us</a>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <a href="../index.html" class="brand">
+          <span class="brand-mark" aria-hidden="true">
+            <img src="../assets/adlea-logo.png" alt="" />
+          </span>
+          <span class="brand-text">ADLEA</span>
+        </a>
+        <p>The Armenian Dual Language Educators Association is a global, grassroots network<br>built by educators, for educators.</p>
+      </div>
+      <div>
+        <h4>Site</h4>
+        <ul>
+          <li><a href="../about.html">About Us</a></li>
+          <li><a href="../team.html">Team</a></li>
+          <li><a href="index.html">Solutions</a></li>
+          <li><a href="../membership.html">Membership</a></li>
+          <li><a href="../partnerships.html">Partnerships</a></li>
+          <li><a href="../contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="mailto:info@adlea.org">info@adlea.org</a></li>
+          <li><a href="https://linkedin.com/company/adlea">LinkedIn</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-disclaimer">
+      <p><strong>ADLEA is a nonpartisan organization.</strong> We do not represent, endorse, or advance the political agenda of any party, government, or institution. Our work is rooted in something older and more enduring: the wisdom, depth, and continuity carried by Armenian culture and language across generations. We bring that inheritance into conversation with modern pedagogy, neuroscience, and human-centered education to prepare a generation of learners ready for the world ahead. This is the whole of our mandate, nothing more, nothing less.</p>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 ADLEA Inc. All rights reserved.</span>
+      <span>Bridging languages. Connecting hearts. Empowering youth.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>

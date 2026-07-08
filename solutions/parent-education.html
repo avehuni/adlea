@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ADLEA Solutions for Parent Education</title>
+<meta name="description" content="Informed, engaged families are not a bonus in Armenian DLI — they are the foundation every sustainable program is built on.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Nunito+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/styles.css">
+<style>
+  /* ── Opening: two-column split ── */
+  .pe-split {
+    display: grid;
+    grid-template-columns: 1fr 460px;
+    gap: 4rem;
+    align-items: center;
+  }
+  .pe-prose p {
+    font-size: 1.02rem;
+    line-height: 1.8;
+    color: var(--gray-text);
+    margin-bottom: 1.4rem;
+  }
+  .pe-prose p:last-child { margin-bottom: 0; }
+
+  @media (max-width: 1100px) {
+    .pe-split { grid-template-columns: 1fr; gap: 2.5rem; }
+  }
+
+  /* ── Three goals: alternating split layout ── */
+  .pe-goal {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    gap: 2rem;
+    align-items: start;
+    background: var(--white);
+    border-radius: 12px;
+    padding: 2.2rem 2rem;
+    box-shadow: 0 3px 14px rgba(50,73,110,0.09);
+    border-left: 5px solid var(--gold);
+  }
+  .pe-goal:not(:last-child) { margin-bottom: 1.5rem; }
+  .pe-goal .goal-num {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3.2rem;
+    height: 3.2rem;
+    border-radius: 50%;
+    background: var(--gold);
+    color: var(--white);
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 1.3rem;
+    flex-shrink: 0;
+  }
+  .pe-goal h3 { font-size: 1.1rem; color: var(--navy); margin: 0 0 0.6rem; line-height: 1.3; }
+  .pe-goal p  { font-size: 0.95rem; color: var(--gray-text); line-height: 1.7; margin: 0; }
+
+  /* ── Responsive ── */
+  @media (max-width: 700px) {
+    .pe-goal { grid-template-columns: 1fr; }
+    .pe-pull { padding: 2rem 1.5rem; }
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="nav-inner">
+    <a href="../index.html" class="brand">
+      <span class="brand-mark" aria-hidden="true">
+        <img src="../assets/adlea-logo.png" alt="" />
+      </span>
+      <span class="brand-text">ADLEA</span>
+    </a>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:22px;height:22px;"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../about.html">About Us</a></li>
+      <li><a href="../team.html">Team</a></li>
+      <li class="has-dropdown">
+        <a href="index.html" class="active">Solutions <span class="caret">&#9662;</span></a>
+        <ul class="dropdown">
+        <li class="dropdown-group-label">Core Programs</li>
+        <li><a href="online-resource-platform.html">Online Resource Platform</a></li>
+        <li><a href="professional-development.html">Professional Development</a></li>
+        <li><a href="curriculum-design-innovation.html">Curriculum Design and Innovation</a></li>
+        <li><a href="assessment-development.html">Assessment Development</a></li>
+        <li><a href="translation-interpreting.html">Translation and Interpreting</a></li>
+        <li><a href="advocacy-consulting.html">Advocacy and Consulting</a></li>
+        <li class="dropdown-group-label">Expanding Access</li>
+        <li><a href="virtual-adli-programs.html">Virtual ADLI Programs</a></li>
+        <li><a href="parent-education.html" class="active">Parent Education</a></li>
+        <li><a href="professional-exchange.html">Professional Exchange</a></li>
+        <li><a href="adlea-app.html">ADLEA App</a></li>
+        <li><a href="publications-certifications.html">Publications and Certifications</a></li>
+        <li><a href="conferences-wellness-retreats.html">ADLEA Confluence</a></li>
+        </ul>
+      </li>
+      <li><a href="../membership.html">Membership</a></li>
+      <li><a href="../partnerships.html">Partnerships</a></li>
+      <li><a href="../contact.html">Contact</a></li>
+    </ul>
+  </div>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="page-hero">
+    <div class="wrap">
+      <span style="color:var(--navy); font-family:var(--font-display); font-size:0.85rem; letter-spacing:0.08em; text-transform:uppercase; font-weight:700;">Expanding Access</span>
+      <h1>Parent Education</h1>
+      <p>Educating parents on the purpose and benefits of DLI for program sustainability.</p>
+    </div>
+  </section>
+
+  <!-- SECTION 1: Why This Program Exists -->
+  <section>
+    <div class="wrap">
+      <div class="pe-split">
+        <div class="pe-prose">
+          <span style="color:var(--gold); font-family:var(--font-display); font-size:0.8rem; letter-spacing:0.09em; text-transform:uppercase; font-weight:700; display:block; margin-bottom:1rem;">Why This Program Exists</span>
+          <p>Armenian Dual Language Immersion is a choice program. Families enroll because they want something more for their children, biliteracy, cultural connection, academic depth. But when content gets complex, as it inevitably does around second and third grade, families who do not fully understand the model are the first to pull their children out. "This is too much Armenian," they say, not because the program has failed, but because no one helped them understand what the program actually is.</p>
+          <p>Armenian DLI is not a heritage language class. It is not basic literacy or the ability to write a letter to grandparents. It is a rigorous, standards-based immersion program that develops language to the depth a child would have received had they been educated in Armenia, while simultaneously developing full academic proficiency in the partner language of the country where the program is offered. That is an extraordinary educational commitment, and families cannot sustain what they do not understand.</p>
+        </div>
+        <div style="display:flex; align-items:center; justify-content:center;">
+          <div style="width:420px; height:420px; border-radius:50%; overflow:hidden; border:6px solid var(--sky); box-shadow:0 8px 32px rgba(92,162,215,0.25); flex-shrink:0;">
+            <img src="../assets/parent-education-hero.png" alt="ADLEA parent education workshop" style="width:100%; height:100%; object-fit:cover; object-position:center 20%;">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 2: Three Goals -->
+  <section class="bg-sky-tint">
+    <div class="wrap">
+      <div style="text-align:center; max-width:820px; margin:0 auto var(--space-lg);">
+        <span style="color:var(--gold); font-family:var(--font-display); font-size:0.8rem; letter-spacing:0.09em; text-transform:uppercase; font-weight:700;">What This Program Delivers</span>
+        <h2 style="margin-top:0.75rem; white-space:nowrap; font-size:clamp(1.4rem, 2.3vw, 2.1rem);">Building the Foundation Programs Depend On</h2>
+      </div>
+      <div class="pe-goals">
+        <div class="pe-goal">
+          <div class="goal-num">1</div>
+          <div>
+            <h3>Resources to Help Parents Understand the DLI Model</h3>
+            <p>Accessible, well-designed materials that explain what Armenian DLI actually is: how biliteracy develops, what to expect at each grade level, why the early years feel heavy in Armenian, and what the research says about long-term academic and cognitive outcomes. Parents who understand the model become its most powerful advocates.</p>
+          </div>
+        </div>
+        <div class="pe-goal">
+          <div class="goal-num">2</div>
+          <div>
+            <h3>Workshops on the Long-Term Benefits of Bilingualism</h3>
+            <p>Interactive sessions, in person and virtual, that bring parents into the research on bilingualism, biliteracy, and dual language immersion. What does it mean for a child's brain, academic trajectory, and identity to develop two languages at the highest academic level? These workshops answer those questions in language families can connect to and act on.</p>
+          </div>
+        </div>
+        <div class="pe-goal">
+          <div class="goal-num">3</div>
+          <div>
+            <h3>Stronger Programs Through Informed, Engaged Families</h3>
+            <p>Parent education is not a side program. It is infrastructure. When families understand and believe in the model, they stay through the hard years, advocate within their school communities, and become the foundation that allows programs to grow, stabilize, and thrive. Without informed, engaged families, there are no sustainable DLI programs.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="tight">
+    <div class="cta-band">
+      <h2>Want to Bring This to Your Program?</h2>
+      <p class="cta-oneline">Reach out to learn how ADLEA can support your district, school, or community.</p>
+      <a href="../contact.html" class="btn btn-gold">Contact Us</a>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <a href="../index.html" class="brand">
+          <span class="brand-mark" aria-hidden="true">
+            <img src="../assets/adlea-logo.png" alt="" />
+          </span>
+          <span class="brand-text">ADLEA</span>
+        </a>
+        <p>The Armenian Dual Language Educators Association is a global, grassroots network<br>built by educators, for educators.</p>
+      </div>
+      <div>
+        <h4>Site</h4>
+        <ul>
+          <li><a href="../about.html">About Us</a></li>
+          <li><a href="../team.html">Team</a></li>
+          <li><a href="index.html">Solutions</a></li>
+          <li><a href="../membership.html">Membership</a></li>
+          <li><a href="../partnerships.html">Partnerships</a></li>
+          <li><a href="../contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="mailto:info@adlea.org">info@adlea.org</a></li>
+          <li><a href="https://linkedin.com/company/adlea">LinkedIn</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-disclaimer">
+      <p><strong>ADLEA is a nonpartisan organization.</strong> We do not represent, endorse, or advance the political agenda of any party, government, or institution. Our work is rooted in something older and more enduring: the wisdom, depth, and continuity carried by Armenian culture and language across generations. We bring that inheritance into conversation with modern pedagogy, neuroscience, and human-centered education to prepare a generation of learners ready for the world ahead. This is the whole of our mandate, nothing more, nothing less.</p>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 ADLEA Inc. All rights reserved.</span>
+      <span>Bridging languages. Connecting hearts. Empowering youth.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>
