@@ -2,17 +2,17 @@
    ADLEA — Design Tokens (sampled from existing site)
    ============================================ */
 :root {
-  --navy: #32496E;
-  --navy-deep: #243653;
-  --sky: #5CA2D7;
-  --sky-tint: #EDF5FB;
-  --sky-tint-2: #E1EFFA;
-  --gold: #DC683D;
-  --gold-soft: #E99A84;
-  --ember: #DC683D;
+  --navy: #1B3A6B;
+  --navy-deep: #142B4F;
+  --sky: #4A96D2;
+  --sky-tint: #ECF4FA;
+  --sky-tint-2: #E2EEF8;
+  --gold: #C94B1A;
+  --gold-soft: #DC8B6C;
+  --ember: #C94B1A;
   --white: #FFFFFF;
-  --ink: #32496E;
-  --gray-text: #5A6B85;
+  --ink: #1B3A6B;
+  --gray-text: #5A5855;
 
   --font-display: 'Poppins', 'Nunito Sans', sans-serif;
   --font-body: 'Nunito Sans', 'Poppins', sans-serif;
@@ -1011,6 +1011,7 @@ a.partner-card-logo:hover {
 .team-card .role { font-size: 0.88rem; color: var(--ember); font-weight: 700; }
 .team-card .role.role-nowrap { font-size: 0.78rem; white-space: nowrap; }
 .team-card .placeholder-note { font-size: 0.8rem; color: var(--gray-text); margin-top: 0.5rem; font-style: italic; }
+.team-card .bio { font-size: 0.85rem; color: var(--gray-text); margin-top: 0.5rem; line-height: 1.55; }
 
 .team-grid-advisory .team-photo {
   width: 180px;

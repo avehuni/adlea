@@ -3,12 +3,47 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ADLEA Solutions for Publications and Certifications</title>
+<title>ADLEA Solutions for Teacher Pathway and Publications</title>
 <meta name="description" content="Supporting Armenian DLI educators in publishing their work and earning ADLEA certifications — the gold standard of recognition in the field.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Nunito+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../css/styles.css">
 <style>
+  /* ── Teacher Pathway Steps ── */
+  .tp-steps {
+    max-width: 1100px;
+    margin: 3rem auto 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .tp-step {
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+    background: var(--white);
+    border-left: 4px solid var(--gold);
+    border-radius: 8px;
+    padding: 1.75rem 2rem;
+    box-shadow: 0 3px 14px rgba(50,73,110,0.08);
+  }
+  .tp-step .step-badge {
+    flex-shrink: 0;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: var(--gold);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 0.95rem;
+  }
+  .tp-step h3 { font-size: 1.05rem; color: var(--navy); margin: 0 0 0.4rem; }
+  .tp-step p { font-size: 0.94rem; color: var(--gray-text); line-height: 1.6; margin: 0; }
+
   /* ── Opening split ── */
   .pub-split {
     display: grid;
@@ -133,7 +168,7 @@
         <li><a href="parent-education.html">Parent Education</a></li>
         <li><a href="professional-exchange.html">Professional Exchange</a></li>
         <li><a href="adlea-app.html">ADLEA App</a></li>
-        <li><a href="publications-certifications.html" class="active">Publications and Certifications</a></li>
+        <li><a href="publications-certifications.html" class="active">Teacher Pathway and Publications</a></li>
         <li><a href="conferences-wellness-retreats.html">ADLEA Confluence</a></li>
         </ul>
       </li>
@@ -150,8 +185,50 @@
   <section class="page-hero">
     <div class="wrap">
       <span style="color:var(--navy); font-family:var(--font-display); font-size:0.85rem; letter-spacing:0.08em; text-transform:uppercase; font-weight:700;">Expanding Access</span>
-      <h1>Publications and Certifications</h1>
-      <p style="max-width:900px; white-space:nowrap;">Helping teachers become published authors to share their expertise and earn ADLEA certifications.</p>
+      <h1>Teacher Pathway and Publications</h1>
+      <p style="max-width:900px;">A guided route into the Armenian DLI classroom, and support for educators publishing their work.</p>
+    </div>
+  </section>
+
+  <!-- SECTION: Teacher Pathway -->
+  <section class="bg-sky-tint">
+    <div class="wrap">
+      <div style="text-align:center; max-width:1000px; margin:0 auto;">
+        <span style="color:var(--gold); font-family:var(--font-display); font-size:0.85rem; letter-spacing:0.08em; text-transform:uppercase; font-weight:700;">Teacher Pathway</span>
+        <h2 style="margin-top:0.75rem;">A Guided Route Into the Armenian DLI Classroom</h2>
+        <p class="lede" style="margin:0.75rem auto 0;">Every Armenian DLI classroom depends on finding teachers who bring both the credential a state requires and the depth of academic Armenian the program demands, and those two qualifications rarely arrive together on their own. ADLEA closes that gap by building a structured pathway in direct partnership with universities in the host country and in Armenia, guiding candidates from their first step through to formal readiness for the classroom, and standing behind every teacher who completes it.</p>
+      </div>
+
+      <div class="tp-steps">
+        <div class="tp-step">
+          <span class="step-badge">1</span>
+          <div>
+            <h3>Partner and Recruit</h3>
+            <p>ADLEA partners with universities in the host country and in Armenia, who design and own the coursework that anchors this pathway, and works alongside them to recruit candidates into becoming Armenian DLI teachers through it. Where a university seeks additional support in shaping that coursework to meet its own requirements, ADLEA is also available to build it under direct service contract, but the pathway's academic foundation belongs to the universities themselves.</p>
+          </div>
+        </div>
+        <div class="tp-step">
+          <span class="step-badge">2</span>
+          <div>
+            <h3>Validate Language Proficiency</h3>
+            <p>Candidates are guided toward a recognized proficiency standard such as the ACTFL Oral Proficiency Interview to demonstrate the level of academic Armenian required to teach in the program, giving every candidate a clear, externally validated benchmark to work toward.</p>
+          </div>
+        </div>
+        <div class="tp-step">
+          <span class="step-badge">3</span>
+          <div>
+            <h3>Verify and Endorse</h3>
+            <p>Once university coursework, state requirements, and language proficiency are all in hand, ADLEA verifies the full picture and endorses the candidate into the program, while the academic credit and degree itself remain exactly where they belong, with the partner universities that conferred them.</p>
+          </div>
+        </div>
+        <div class="tp-step">
+          <span class="step-badge">4</span>
+          <div>
+            <h3>Join the Registry</h3>
+            <p>Verified candidates are registered with ADLEA as part of a growing pool of teachers confirmed ready to teach Armenian DLI in their country, giving schools and districts a trusted place to find qualified educators and giving candidates a meaningful outcome for the work they've completed.</p>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -162,10 +239,10 @@
         <div class="pub-prose">
           <span style="color:var(--gold); font-family:var(--font-display); font-size:0.8rem; letter-spacing:0.09em; text-transform:uppercase; font-weight:700; display:block; margin-bottom:1rem;">Knowledge Worth Sharing</span>
           <p>Armenian DLI educators carry expertise that the field cannot afford to keep inside the classroom. The teacher who has spent a decade developing biliteracy lessons, navigating cross-linguistic transfer in real classrooms, and building community around Armenian language education has knowledge worth publishing, worth certifying, and worth sharing with every educator who comes after.</p>
-          <p>ADLEA's Publications and Certifications program creates the infrastructure for that knowledge to travel.</p>
+          <p>ADLEA's Teacher Pathway and Publications program creates the infrastructure for that knowledge to travel.</p>
         </div>
         <div style="display:flex; align-items:center; justify-content:center;">
-          <img src="../assets/pub-cert-hero.svg" alt="Publications and Certifications" style="width:400px; height:400px; object-fit:contain;">
+          <img src="../assets/pub-cert-hero.svg" alt="Teacher Pathway and Publications" style="width:400px; height:400px; object-fit:contain;">
         </div>
       </div>
     </div>
@@ -259,7 +336,7 @@
     </div>
     <div class="footer-bottom">
       <span>&copy; 2026 ADLEA Inc. All rights reserved.</span>
-      <span>Bridging languages. Connecting hearts. Empowering youth.</span>
+      <span>Bridging Languages. Connecting Hearts. Empowering Youth.</span>
     </div>
   </div>
 </footer>
