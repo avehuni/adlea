@@ -275,6 +275,9 @@ p { color: var(--gray-text); }
     padding: 1.2rem 1.75rem 1.6rem;
     gap: 1rem;
     box-shadow: 0 12px 20px rgba(50,73,110,0.08);
+    max-height: 80vh;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
   }
   .nav-links.open { display: flex; }
   .nav-toggle { display: block; }
