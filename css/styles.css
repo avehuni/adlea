@@ -1323,7 +1323,16 @@ footer { background: var(--navy-deep); color: #C7D8E9; padding: var(--space-lg) 
 }
 
 @media (max-width: 760px) {
-  .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "brand brand"
+      "site connect";
+    gap: 2rem 1.5rem;
+  }
+  .footer-grid > div:nth-child(1) { grid-area: brand; }
+  .footer-grid > div:nth-child(2) { grid-area: site; }
+  .footer-grid > div:nth-child(3) { grid-area: connect; }
 }
 
 footer .brand-text { color: var(--white); }
