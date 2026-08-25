@@ -942,6 +942,34 @@ section.tight { padding: var(--space-lg) 0; }
   font-size: 0.97rem;
 }
 
+.partner-category { margin-bottom: 3.5rem; }
+.partner-category:last-child { margin-bottom: 0; }
+.partner-category-label {
+  display: block;
+  text-align: center;
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--gold);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 1.5rem;
+}
+.partner-card-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border: 2px dashed var(--sky);
+  background: var(--sky-tint);
+  color: var(--gray-text);
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  font-style: italic;
+  font-weight: 400;
+  padding: 1.3rem 1.4rem;
+}
+
 .partners-grid-logos {
   grid-template-columns: repeat(4, 1fr);
 }
@@ -1038,7 +1066,7 @@ a.partner-card-logo:hover {
   display: grid;
   grid-template-columns: 220px 1fr;
   gap: var(--space-md);
-  align-items: start;
+  align-items: center;
   padding: var(--space-md) 0;
   border-bottom: 1px solid var(--sky-tint-2);
 }
@@ -1051,6 +1079,7 @@ a.partner-card-logo:hover {
   border-radius: 50%;
   background: var(--sky-tint);
   border: 4px solid var(--sky);
+  box-sizing: border-box;
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -1065,6 +1094,7 @@ a.partner-card-logo:hover {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  border-radius: 50%;
   display: block;
 }
 
