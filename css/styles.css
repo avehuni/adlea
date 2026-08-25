@@ -1362,6 +1362,13 @@ footer a:hover { color: var(--gold); }
   gap: 0.6rem;
 }
 
+@media (max-width: 760px) {
+  .footer-bottom {
+    justify-content: center;
+    text-align: center;
+  }
+}
+
 .footer-disclaimer {
   border-top: 1px solid rgba(199,216,233,0.15);
   border-bottom: 1px solid rgba(199,216,233,0.15);
