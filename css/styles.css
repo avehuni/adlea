@@ -1329,10 +1329,14 @@ footer { background: var(--navy-deep); color: #C7D8E9; padding: var(--space-lg) 
       "brand brand"
       "site connect";
     gap: 2rem 1.5rem;
+    text-align: center;
   }
   .footer-grid > div:nth-child(1) { grid-area: brand; }
   .footer-grid > div:nth-child(2) { grid-area: site; }
   .footer-grid > div:nth-child(3) { grid-area: connect; }
+  .footer-grid .brand { justify-content: center; }
+  .footer-grid p { margin-left: auto; margin-right: auto; }
+  .footer-grid ul { align-items: center; }
 }
 
 footer .brand-text { color: var(--white); }
