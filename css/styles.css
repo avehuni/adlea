@@ -346,6 +346,11 @@ p { color: var(--gray-text); }
       "ctas";
     text-align: center;
   }
+  .hero-about .hero-inner {
+    grid-template-areas:
+      "text"
+      "photo";
+  }
   .hero-ctas { justify-content: center; }
   .hero-photo-wrap { justify-content: center; display: flex; }
 }
@@ -411,8 +416,9 @@ p { color: var(--gray-text); }
   .hero .lede { margin-bottom: 1.5rem; font-size: 1.05rem; }
   .hero-text { margin-bottom: 1.2rem; }
   .hero-photo-ring { width: min(280px, 70%); }
-  .hero-about .hero-inner { gap: 1.5rem; }
+  .hero-about .hero-inner { gap: 1.8rem; }
   .hero-inner { gap: 1.9rem; }
+  .hero:not(.hero-about) .hero-text { margin-bottom: 0; }
 }
 
 .hero-ctas { display: flex; gap: 1rem; flex-wrap: wrap; }
