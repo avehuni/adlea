@@ -337,6 +337,14 @@ p { color: var(--gray-text); }
 .hero-ctas { grid-area: ctas; }
 .hero-photo-wrap { grid-area: photo; }
 
+.hero-about .hero-inner {
+  grid-template-areas: "text photo";
+}
+
+.hero-about .lede {
+  font-size: 1.6rem;
+}
+
 @media (max-width: 900px) {
   .hero-inner {
     grid-template-columns: 1fr;
