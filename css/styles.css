@@ -325,9 +325,7 @@ p { color: var(--gray-text); }
   padding: 0 1.75rem;
   display: grid;
   grid-template-columns: 1.2fr 0.8fr;
-  grid-template-areas:
-    "text photo"
-    "ctas photo";
+  grid-template-areas: "text photo";
   gap: var(--space-lg);
   align-items: center;
   position: relative;
@@ -337,8 +335,10 @@ p { color: var(--gray-text); }
 .hero-ctas { grid-area: ctas; }
 .hero-photo-wrap { grid-area: photo; }
 
-.hero-about .hero-inner {
-  grid-template-areas: "text photo";
+.hero-left {
+  grid-area: text;
+  display: flex;
+  flex-direction: column;
 }
 
 .hero-about .lede {
@@ -354,6 +354,7 @@ p { color: var(--gray-text); }
       "ctas";
     text-align: center;
   }
+  .hero-left { display: contents; }
   .hero-about .hero-inner {
     grid-template-areas:
       "text"
