@@ -412,6 +412,7 @@ p { color: var(--gray-text); }
   .hero-text { margin-bottom: 1.2rem; }
   .hero-photo-ring { width: min(280px, 70%); }
   .hero-about .hero-inner { gap: 1.5rem; }
+  .hero-inner { gap: 1.9rem; }
 }
 
 .hero-ctas { display: flex; gap: 1rem; flex-wrap: wrap; }
