@@ -136,11 +136,57 @@
   .pd-delivery-card h3 { font-size: 1rem; color: var(--navy); margin: 0 0 0.6rem; }
   .pd-delivery-card p { font-size: 0.91rem; color: var(--gray-text); line-height: 1.65; margin: 0; }
 
+  /* ── Strand navigator ── */
+  .pd-strand-nav {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.75rem;
+  }
+  .pd-strand-card {
+    display: block;
+    background: var(--white);
+    border-radius: 12px;
+    padding: 2.2rem 2rem;
+    box-shadow: 0 3px 14px rgba(50,73,110,0.09);
+    text-decoration: none;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+  .pd-strand-card:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(50,73,110,0.14); }
+  .pd-strand-card .pd-strand-num {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.4rem;
+    height: 2.4rem;
+    border-radius: 50%;
+    background: var(--sky-tint);
+    color: var(--sky);
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+  .pd-strand-card h3 { font-size: 1.2rem; color: var(--navy); margin: 0 0 0.6rem; }
+  .pd-strand-card p { font-size: 0.94rem; color: var(--gray-text); line-height: 1.65; margin: 0 0 1rem; }
+  .pd-strand-card .more { font-size: 0.9rem; }
+
+  .pd-strand-label {
+    text-align: center;
+    font-family: var(--font-display);
+    font-size: 0.78rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--sky);
+    margin-bottom: 0.75rem;
+  }
+
   /* ── Responsive ── */
   @media (max-width: 900px) {
     .pd-goals-grid,
     .pd-focus-grid,
-    .pd-delivery-grid { grid-template-columns: 1fr; }
+    .pd-delivery-grid,
+    .pd-strand-nav { grid-template-columns: 1fr; }
     .pd-framework-split { grid-template-columns: 1fr; gap: 2.5rem; }
   }
 </style>
@@ -197,9 +243,35 @@
     </div>
   </section>
 
-  <!-- SECTION 1: Armenian DLI Demands Its Own Training -->
-  <section>
+  <!-- STRAND NAVIGATOR -->
+  <section class="tight bg-sky-tint">
     <div class="wrap">
+      <div class="pd-section-head" style="margin-bottom:2.2rem;">
+        <span style="color:var(--gold); font-family:var(--font-display); font-size:0.8rem; letter-spacing:0.09em; text-transform:uppercase; font-weight:700;">Two Strands, One Program</span>
+        <h2 style="font-size:clamp(1.5rem, 2.4vw, 2.2rem);">Training Built for Everyone a DLI Program Depends On</h2>
+        <p class="pd-subline">Excellent teaching and excellent leadership have to grow together, so ADLEA's Professional Development program trains both.</p>
+      </div>
+      <div class="pd-strand-nav">
+        <a href="#strand-teachers" class="pd-strand-card">
+          <span class="pd-strand-num">1</span>
+          <h3>For Teachers</h3>
+          <p>Classroom-level training in the Armenian DLI instructional model, from biliteracy planning to translanguaging pedagogy.</p>
+          <span class="more">Jump to this strand &#8594;</span>
+        </a>
+        <a href="#strand-leaders" class="pd-strand-card">
+          <span class="pd-strand-num">2</span>
+          <h3>For School Leaders</h3>
+          <p>Leadership-level training for principals, assistant principals, and district leaders who steward a DLI program's goals, models, and sustainability.</p>
+          <span class="more">Jump to this strand &#8594;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 1: Armenian DLI Demands Its Own Training -->
+  <section id="strand-teachers">
+    <div class="wrap">
+      <div class="pd-strand-label">Strand 1 &middot; For Teachers</div>
       <div class="pd-section-head">
         <span style="color:var(--gold); font-family:var(--font-display); font-size:0.8rem; letter-spacing:0.09em; text-transform:uppercase; font-weight:700;">The Training Gap</span>
         <h2 style="font-size:clamp(1.5rem, 2.4vw, 2.2rem);">Armenian DLI Demands Its Own Training</h2>
@@ -237,6 +309,7 @@
           <div class="goal-num">3</div>
           <h3>Leadership-Focused Sessions for Administrators</h3>
           <p>Dedicated training for program administrators and instructional leaders, equipping them to guide, sustain, and grow Armenian DLI programs at the school and district level.</p>
+          <a href="#strand-leaders" class="more" style="display:inline-block; margin-top:0.8rem;">See the full leadership strand &#8594;</a>
         </div>
       </div>
     </div>
@@ -307,6 +380,133 @@
         <div class="pd-focus-card">
           <h3>Educator Wellbeing and Sustaining Practice</h3>
           <p>Equipping teachers with the inner resources and professional community structures to sustain joyful, culturally grounded instruction over the long arc of a career.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STRAND DIVIDER -->
+  <section class="tight" style="background: var(--navy); padding-top:2.5rem; padding-bottom:2.5rem;">
+    <div class="wrap" style="text-align:center;">
+      <span style="color:var(--sky); font-family:var(--font-display); font-size:0.8rem; letter-spacing:0.09em; text-transform:uppercase; font-weight:700;">Strand 2 &middot; For School Leaders</span>
+      <h2 style="color:var(--white); margin-top:0.6rem; font-size:clamp(1.4rem, 2.4vw, 2rem);">Now, Training for the Leaders Who Steward These Programs</h2>
+    </div>
+  </section>
+
+  <!-- SECTION L1: The Leadership Gap -->
+  <section id="strand-leaders">
+    <div class="wrap">
+      <div class="pd-section-head">
+        <span style="color:var(--gold); font-family:var(--font-display); font-size:0.8rem; letter-spacing:0.09em; text-transform:uppercase; font-weight:700;">The Leadership Gap</span>
+        <h2 style="font-size:clamp(1.5rem, 2.4vw, 2.2rem);">A DLI Program Rises or Falls With Its Leadership</h2>
+      </div>
+      <div class="pd-intro-split">
+        <div class="prose">
+          <p style="font-size:1.05rem; line-height:1.8; color:var(--gray-text);">A thriving Armenian Dual Language Immersion program is inseparable from the leadership around it. The goals a program is working toward, the instructional model that carries it, the staffing and scheduling decisions that determine whether it can function day to day, and the sustained institutional will a program needs to survive its most fragile early years all rest on the judgment of the principal, the assistant principal, or the district leader charged with protecting it. When that leader arrives without a genuine grounding in what Armenian DLI is building toward and why, even excellent teaching can be undermined by decisions made one level above the classroom. ADLEA's School Leadership Training closes that gap, giving the administrators and district leaders who steward these programs the same depth of understanding in DLI goals, instructional models, and research that ADLEA already builds in teachers, so that leadership becomes a source of stability for a program rather than a variable it has to survive.</p>
+        </div>
+        <div class="pd-intro-image">
+          <img src="../assets/pd-training-photo.jpg" alt="School leaders discussing an Armenian Dual Language Immersion program">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION L2: Three Core Deliverables -->
+  <section class="bg-sky-tint">
+    <div class="wrap">
+      <div class="pd-section-head">
+        <span style="color:var(--gold); font-family:var(--font-display); font-size:0.8rem; letter-spacing:0.09em; text-transform:uppercase; font-weight:700;">What This Program Delivers</span>
+        <h2>Built Around the Leaders It Serves</h2>
+      </div>
+      <div class="pd-goals-grid">
+        <div class="pd-goal-card">
+          <div class="goal-num">1</div>
+          <h3>Fluency in DLI Goals and Models</h3>
+          <p>Leaders build genuine command of what Armenian Dual Language Immersion is designed to achieve and the instructional models that carry it, so every program decision is made from real understanding rather than assumption.</p>
+        </div>
+        <div class="pd-goal-card">
+          <div class="goal-num">2</div>
+          <h3>Research-Informed Decision-Making</h3>
+          <p>Leaders learn the research base behind biliteracy and dual immersion so scheduling, staffing, and program design choices are grounded in evidence, and so leaders can confidently defend the model to families and school boards.</p>
+        </div>
+        <div class="pd-goal-card">
+          <div class="goal-num">3</div>
+          <h3>Operational and Sustainability Leadership</h3>
+          <p>Leaders gain the operational judgment and long-range planning skills needed to protect a DLI program through leadership transitions, budget pressure, and enrollment growth.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION L3: The Leadership Framework -->
+  <section>
+    <div class="wrap">
+      <div class="pd-section-head">
+        <span style="color:var(--gold); font-family:var(--font-display); font-size:0.8rem; letter-spacing:0.09em; text-transform:uppercase; font-weight:700;">Our Approach</span>
+        <h2>The Framework Behind the Leadership Training</h2>
+      </div>
+      <div class="pd-framework-split">
+        <div class="prose">
+          <p>ADLEA's School Leadership Training is built on the premise that a leader does not need to have taught in a DLI classroom to lead one well, but does need a genuine, researched understanding of what the model is, why it works, and what it takes to sustain. The training moves across five dimensions of leadership, from the program's founding vision through the daily operational choices that either protect or erode it, so that leaders come away not with talking points, but with the working knowledge to make sound decisions on their own.</p>
+        </div>
+        <div class="pd-pillars">
+          <div class="pd-pillar">
+            <h4>Program Goals and Vision</h4>
+            <p>A precise understanding of what Armenian DLI is working toward, biliteracy, bicultural competence, and academic parity across both languages, so every decision protects that vision.</p>
+          </div>
+          <div class="pd-pillar">
+            <h4>Instructional Models</h4>
+            <p>How the DLI instructional model functions in a classroom, from language allocation to the Bridge, with enough depth to recognize strong practice and notice when a program has drifted off course.</p>
+          </div>
+          <div class="pd-pillar">
+            <h4>Research Foundations</h4>
+            <p>Direct engagement with the research base behind biliteracy and dual immersion, equipping leaders to make evidence-grounded decisions and speak with authority to staff, families, and boards.</p>
+          </div>
+          <div class="pd-pillar">
+            <h4>Operational Leadership</h4>
+            <p>The practical operating knowledge specific to running a DLI program well: staffing pipelines, master scheduling, and budget decisions that treat both languages as equally essential.</p>
+          </div>
+          <div class="pd-pillar">
+            <h4>Sustainability and Long-Term Success</h4>
+            <p>Succession planning and institutional habits that let a program's success outlive any single leader's tenure, so continuity never depends on one person staying in the role.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION L4: Focus Areas -->
+  <section class="bg-sky-tint">
+    <div class="wrap">
+      <div class="pd-section-head">
+        <span style="color:var(--gold); font-family:var(--font-display); font-size:0.8rem; letter-spacing:0.09em; text-transform:uppercase; font-weight:700;">Professional Learning Focus Area Examples</span>
+        <h2 style="font-size:clamp(1.4rem, 2.6vw, 2.2rem);">Where Strong DLI Leadership Begins</h2>
+        <p class="pd-subline">The following represent a selection of the core topics ADLEA's School Leadership Training addresses — a curriculum that continues to grow with the field and the needs of Armenian DLI programs.</p>
+      </div>
+      <div class="pd-focus-grid">
+        <div class="pd-focus-card">
+          <h3>Understanding the DLI Model and Its Goals</h3>
+          <p>What Armenian Dual Language Immersion is actually building toward, and how that shapes every other leadership decision around it.</p>
+        </div>
+        <div class="pd-focus-card">
+          <h3>Research Foundations for Leaders</h3>
+          <p>The evidence base behind biliteracy and dual immersion, translated into language leaders can use confidently with staff, families, and school boards.</p>
+        </div>
+        <div class="pd-focus-card">
+          <h3>Staffing and Scheduling for DLI Programs</h3>
+          <p>The operational realities specific to a dual immersion model: language allocation, staffing pipelines, and master scheduling that protects instructional time in both languages.</p>
+        </div>
+        <div class="pd-focus-card">
+          <h3>Evaluating and Supporting DLI Instruction</h3>
+          <p>How to observe, coach, and give meaningful feedback to DLI teachers, even for leaders who did not come up through a dual immersion classroom themselves.</p>
+        </div>
+        <div class="pd-focus-card">
+          <h3>Budget, Operations, and Resource Planning</h3>
+          <p>Allocating funding, materials, and resources across two languages as equally essential, rather than treating one as core and the other as supplemental.</p>
+        </div>
+        <div class="pd-focus-card">
+          <h3>Sustainability and Succession Planning</h3>
+          <p>Protecting a program's future through leadership turnover, growth, and institutional change, so continuity doesn't depend on any one person staying in the role.</p>
         </div>
       </div>
     </div>
