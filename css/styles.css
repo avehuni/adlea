@@ -498,6 +498,10 @@ section.tight { padding: var(--space-lg) 0; }
 .section-head.left { text-align: left; }
 .section-head h2 { margin-top: 0.75rem; margin-bottom: 0.5rem; }
 
+@media (max-width: 600px) {
+  .one-line-heading { font-size: 1.1rem; white-space: nowrap; }
+}
+
 /* What We Stand For style: statement centered on top, two wide cards below */
 .stand-for-stacked {
   max-width: 1180px;
