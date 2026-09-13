@@ -341,8 +341,6 @@ p { color: var(--gray-text); }
   flex-direction: column;
 }
 
-.hero-left-centered { transform: translateY(16px); }
-
 .hero-about .lede {
   font-size: 1.6rem;
 }
