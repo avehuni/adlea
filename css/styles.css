@@ -1082,6 +1082,8 @@ a.partner-card-logo:hover {
   overflow: hidden;
 }
 
+.team-grid-leads .team-photo { border-color: var(--sky); }
+
 .team-card h3 { font-size: 1.05rem; margin-bottom: 0.2rem; }
 .team-card h3 .name-link { text-decoration: underline; text-underline-offset: 3px; }
 .team-card .role { font-size: 0.88rem; color: var(--ember); font-weight: 700; }
