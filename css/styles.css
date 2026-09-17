@@ -1066,9 +1066,10 @@ a.partner-card-logo:hover {
 
 .team-grid-leads-4 {
   grid-template-columns: repeat(4, 1fr);
+  column-gap: 5rem;
 }
 @media (max-width: 900px) {
-  .team-grid-leads-4 { grid-template-columns: repeat(2, 1fr); }
+  .team-grid-leads-4 { grid-template-columns: repeat(2, 1fr); column-gap: 1.8rem; }
 }
 @media (max-width: 600px) {
   .team-grid-leads-4 { grid-template-columns: 1fr; }
