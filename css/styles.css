@@ -1101,6 +1101,7 @@ a.partner-card-logo:hover {
 .team-card h3 .name-link { text-decoration: underline; text-underline-offset: 3px; }
 .team-card .role { font-size: 0.88rem; color: var(--ember); font-weight: 700; }
 .team-card .role.role-nowrap { font-size: 0.78rem; white-space: nowrap; }
+.team-card .role.role-nowrap-sm { font-size: 0.62rem; white-space: nowrap; }
 .team-card .placeholder-note { font-size: 0.8rem; color: var(--gray-text); margin-top: 0.5rem; font-style: italic; }
 .team-card .bio { font-size: 0.85rem; color: var(--gray-text); margin-top: 0.5rem; line-height: 1.55; }
 .team-card a.more { display: inline-block; margin-top: 0.5rem; font-weight: 700; color: var(--sky); font-size: 0.9rem; }
