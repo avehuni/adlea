@@ -1064,6 +1064,18 @@ a.partner-card-logo:hover {
   .team-grid-specialists { grid-template-columns: 1fr; }
 }
 
+.team-grid-leads-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+@media (max-width: 900px) {
+  .team-grid-leads-4 { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 600px) {
+  .team-grid-leads-4 { grid-template-columns: 1fr; }
+}
+
+.team-grid + .team-grid { margin-top: 1.8rem; }
+
 .team-card { text-align: center; }
 
 .team-photo {
