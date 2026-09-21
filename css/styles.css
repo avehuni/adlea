@@ -1087,7 +1087,7 @@ a.partner-card-logo:hover {
 
 .team-grid + .team-grid { margin-top: 1.8rem; }
 
-.team-card { text-align: center; }
+.team-card { text-align: center; min-width: 0; }
 
 .team-photo {
   width: 140px;
