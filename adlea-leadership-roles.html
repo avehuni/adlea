@@ -51,6 +51,10 @@
   }
   .roles-toc a:hover { border-color: var(--gold); background: #fef8f5; }
   .roles-toc + .roles-toc { margin-top: 0.75rem; }
+  @media (min-width: 1220px) {
+    .roles-toc { flex-wrap: nowrap; gap: 0.5rem; }
+    .roles-toc a { padding: 0.5rem 0.85rem; font-size: 0.8rem; white-space: nowrap; }
+  }
 
   .role-section {
     border-bottom: 1px solid var(--sky);
