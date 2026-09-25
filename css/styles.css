@@ -1085,6 +1085,15 @@ a.partner-card-logo:hover {
   .team-grid-leads-4 { grid-template-columns: 1fr; }
 }
 
+/* Three-card Lead Guides row: same column width and gap as the four-card rows, centered */
+@media (min-width: 901px) {
+  .team-grid-leads-3 {
+    grid-template-columns: repeat(3, calc((100% - 12rem) / 4));
+    column-gap: 4rem;
+    justify-content: center;
+  }
+}
+
 .team-grid + .team-grid { margin-top: 1.8rem; }
 
 .team-card { text-align: center; min-width: 0; }
