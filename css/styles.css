@@ -173,6 +173,9 @@ p { color: var(--gray-text); }
 .brand-mark svg { width: 30px; height: 30px; }
 .brand-mark img { width: 100%; height: 100%; object-fit: contain; border-radius: 50%; }
 
+/* Logo hidden while the team votes on a new one. Delete this rule to show it again. */
+.brand-mark { display: none; }
+
 .brand-text {
   font-family: var(--font-display);
   font-weight: 800;
