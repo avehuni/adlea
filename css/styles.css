@@ -1582,3 +1582,20 @@ footer a:hover { color: var(--gold); }
 .footer-legal a { color: inherit; font-size: inherit; text-decoration: none; }
 .form-note a { color: var(--ember); text-decoration: underline; text-underline-offset: 2px; }
 .footer-legal a:hover { text-decoration: underline; }
+
+/* Home hero: soft floating circles */
+@keyframes hero-float-a { 0%,100% { transform: translate(0,0); } 50% { transform: translate(-90px, 70px); } }
+@keyframes hero-float-b { 0%,100% { transform: translate(0,0); } 50% { transform: translate(100px, -70px); } }
+@keyframes hero-float-c { 0%,100% { transform: translate(0,0); } 33% { transform: translate(60px, 50px); } 66% { transform: translate(-50px, 30px); } }
+@keyframes hero-float-d { 0%,100% { transform: translate(0,0); } 50% { transform: translate(-70px, -60px); } }
+.hero:not(.hero-about)::before { background: rgba(255,255,255,0.13); animation: hero-float-a 14s ease-in-out infinite; }
+.hero:not(.hero-about)::after  { background: rgba(255,255,255,0.12); animation: hero-float-b 17s ease-in-out infinite; }
+.hero-bubbles { position: absolute; inset: 0; pointer-events: none; overflow: hidden; }
+.hero:not(.hero-about) .hero-inner { z-index: 1; }   /* keep circles behind text, buttons and photo */
+.hero-bubbles span { position: absolute; border-radius: 50%; background: rgba(255,255,255,0.12); }
+.hero-bubbles .b1 { width: 160px; height: 160px; top: 10%; left: 38%; animation: hero-float-c 15s ease-in-out infinite; }
+.hero-bubbles .b2 { width: 90px;  height: 90px;  top: 70%; left: 52%; background: rgba(255,255,255,0.16); animation: hero-float-d 12s ease-in-out infinite; }
+.hero-bubbles .b3 { width: 220px; height: 220px; top: 55%; right: -4%; background: rgba(255,255,255,0.10); animation: hero-float-c 19s ease-in-out infinite reverse; }
+@media (prefers-reduced-motion: reduce) {
+  .hero::before, .hero::after, .hero-bubbles span { animation: none; }
+}
