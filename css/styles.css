@@ -1599,3 +1599,7 @@ footer a:hover { color: var(--gold); }
 @media (prefers-reduced-motion: reduce) {
   .hero::before, .hero::after, .hero-bubbles span { animation: none; }
 }
+
+/* Line break that only applies on phones */
+.br-mobile { display: none; }
+@media (max-width: 600px) { .br-mobile { display: inline; } }
