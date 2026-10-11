@@ -18,15 +18,46 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Contact form placeholder
+  // Contact form: delivered to info@adlea.org via FormSubmit
   const form = document.querySelector('#contact-form');
   if (form) {
     form.addEventListener('submit', (e) => {
       e.preventDefault();
       const note = document.querySelector('#form-status');
-      if (note) {
-        note.textContent = "This form isn't connected to an inbox yet — for now, please email info@adlea.org directly.";
+      const btn = form.querySelector('button[type="submit"]');
+      const name = form.querySelector('#name').value.trim();
+      const email = form.querySelector('#email').value.trim();
+      const message = form.querySelector('#message').value.trim();
+      if (!name || !email || !message) {
+        note.textContent = 'Please add your name, email, and message.';
+        return;
       }
+      btn.disabled = true;
+      btn.textContent = 'Sending…';
+      note.textContent = '';
+      fetch('https://formsubmit.co/ajax/info@adlea.org', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify({
+          name,
+          email,
+          message,
+          _replyto: email,
+          _subject: 'New message from adlea.org',
+          _template: 'table'
+        })
+      })
+        .then((r) => { if (!r.ok) throw new Error(); return r.json(); })
+        .then(() => {
+          form.reset();
+          btn.textContent = 'Message Sent';
+          note.textContent = 'Thank you for reaching out. We will be in touch soon.';
+        })
+        .catch(() => {
+          btn.disabled = false;
+          btn.textContent = 'Send Message';
+          note.textContent = 'Your message could not be sent from this page. Please email info@adlea.org directly.';
+        });
     });
   }
 });
