@@ -29,11 +29,13 @@ document.addEventListener('DOMContentLoaded', () => {
       const email = form.querySelector('#email').value.trim();
       const message = form.querySelector('#message').value.trim();
       if (!name || !email || !message) {
+        note.className = 'form-note form-status-error';
         note.textContent = 'Please add your name, email, and message.';
         return;
       }
       btn.disabled = true;
       btn.textContent = 'Sending…';
+      note.className = 'form-note';
       note.textContent = '';
       fetch('https://formsubmit.co/ajax/info@adlea.org', {
         method: 'POST',
@@ -51,11 +53,14 @@ document.addEventListener('DOMContentLoaded', () => {
         .then(() => {
           form.reset();
           btn.textContent = 'Message Sent';
+          note.className = 'form-note form-status-success';
           note.textContent = 'Thank you for reaching out. We will be in touch soon.';
+          note.scrollIntoView({ behavior: 'smooth', block: 'center' });
         })
         .catch(() => {
           btn.disabled = false;
           btn.textContent = 'Send Message';
+          note.className = 'form-note form-status-error';
           note.textContent = 'Your message could not be sent from this page. Please email info@adlea.org directly.';
         });
     });
