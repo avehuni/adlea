@@ -1642,6 +1642,7 @@ footer a:hover { color: var(--gold); }
 
 /* Team page: Teal organization section */
 .teal-lede { max-width: 760px; margin: 0.9rem auto 0; text-align: center; }
+.teal-more { margin-top: 1.6rem; }
 .teal-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.8rem 2rem; margin-top: 2.5rem; }
 .teal-card { background: var(--sky-tint); border-radius: 10px; padding: 1.8rem 1.6rem; }
 .teal-card h3 { font-size: 1.1rem; margin-bottom: 0.5rem; }
