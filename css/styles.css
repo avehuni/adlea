@@ -1633,6 +1633,3 @@ footer a:hover { color: var(--gold); }
 /* Line break that only applies on phones */
 .br-mobile { display: none; }
 @media (max-width: 600px) { .br-mobile { display: inline; } }
-
-/* Legal Structure section: officer role descriptions */
-.team-card .officer-desc { font-size: 0.92rem; line-height: 1.6; color: var(--gray-text); max-width: 260px; margin: 0.6rem auto 0; }
