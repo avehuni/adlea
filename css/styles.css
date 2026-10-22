@@ -1633,3 +1633,9 @@ footer a:hover { color: var(--gold); }
 /* Line break that only applies on phones */
 .br-mobile { display: none; }
 @media (max-width: 600px) { .br-mobile { display: inline; } }
+
+/* Legal Structure: voting-member icon */
+.team-card .role-voting { display: flex; justify-content: center; align-items: center; gap: 0.4rem; }
+.vote-icon { width: 22px; height: 22px; color: var(--sky); flex-shrink: 0; }
+.vote-key { display: flex; justify-content: center; align-items: center; gap: 0.45rem; margin-top: 0.8rem; font-size: 0.95rem; color: var(--gray-text); }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
