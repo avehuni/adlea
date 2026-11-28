@@ -1649,6 +1649,3 @@ footer a:hover { color: var(--gold); }
 .teal-card h3 { font-size: 1.1rem; margin-bottom: 0.5rem; }
 .teal-card p { font-size: 0.95rem; line-height: 1.7; }
 @media (max-width: 900px) { .teal-grid { grid-template-columns: 1fr; } }
-
-/* Team page: Consultants block inside Specialist Teams section */
-.consultants-head { margin-top: 4.5rem; padding-top: 3.5rem; border-top: 1px solid rgba(74, 150, 210, 0.35); }
